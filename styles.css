@@ -1,0 +1,51 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+  
+  .categories {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+  }
+  
+  nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  nav li {
+    margin-right: 20px; 
+  }
+
+  .main-photo img {
+    max-width: 554px;
+    border-radius: 15px;
+    margin-top: 0px;
+} 
+  .thumbnail {
+    display: flex;
+    flex-direction: row;
+    height: 115px;
+    gap: 31px;
+  }
+  .thumbnail img{
+    border-radius: 15px;
+  }
+  hr{
+    height: 1px;
+    margin: 25px ;
+  }
+  .icones{
+    width: 45px;
+    height: auto;
+  }
