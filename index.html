@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
   <title>Frontend Mentor | E-commerce product page</title>
   <link rel="stylesheet" href="styles.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -17,28 +17,26 @@
 <body>
   <header>
     <div class="categories">
-      <img src="images/logo.svg" alt="Logo sneakers">
       <nav>
+        <img src="images/logo.svg" alt="Logo sneakers">
         <ul>
-         <li><a href="#">Collections</a></li>
-         <li><a href="#">Men</a></li>
-         <li><a href="#">Women</a></li>
-         <li><a href="#">About</a></li>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
-    </nav>
-    
-     </div>
-   <div class="icones">
-   <img src="images/icon-cart.svg" alt="panier">
-   <img src="images/image-avatar.png" alt="avatar">
-  </div>
+      </nav> 
+      <div class="group2">
+        <img src="images/image-avatar.png" class="Avatar" alt="Avatar">
+        <img src="images/icon-cart.svg"    alt="Panier">
+      </div>
+    </div>
   </header>
-  <hr>  
   <main>
-    <section id="photos">
+    <section class="photos">
       <div class="main-photo">
-        <img src="images/image-product-1.jpg" alt="photo-principale">
+        <img src="images/image-product-1.jpg"  alt="photo-principale">
       </div>
         <div class="thumbnail">
           <img src="images/image-product-1-thumbnail.jpg">
@@ -48,18 +46,24 @@
         </div>
     </section>
     <section id="description">
-      <h1>Sneaker Company</h1>
+      <h1>SNEAKER COMPANY</h1>
       <h2>Fall Limited Edition <br>
         Sneakers</h2>
-      <p>These low-profile sneakers are your perfect casual wear<br>
+      <p class="description-chaussure">These low-profile sneakers are your perfect casual wear<br>
       companion. Featuring a durable rubber outer sole, they’ll<br>
       withstand everything the weather can offer.
       </p>
-      <p>$125.00</p>
-      <p>50%</p>
-      <p>$250.00</p>
-      <button>0</button>
-      <button>Add to cart</button>
+      <p class="reduction">$125.00</p>
+      <p class="pourcentage">50%</p>
+      <p class="prix-original">$250.00</p>
+      <div class="action">
+       <div class="quantite-container">
+         <button class="quantite-btn" id="decrease-btn">-</button>
+         <span class="quantite">1</span>
+         <button class="quantite-btn" id="increase-btn">+</button>
+       </div>
+       <button class="carte">Add to cart</button>
+    </div>
     </section>
   </main>
    <div class="attribution">

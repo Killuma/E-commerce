@@ -1,51 +1,117 @@
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: stretch;
-  }
-  
-  .categories {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
+body{
+  display: flex;
+  flex-direction: column;
+  font-family: "Kumbh Sans", sans-serif;
+}
 
-  main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 150px;
-  }
-  
-  nav ul {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  nav li {
-    margin-right: 20px; 
-  }
+ header, main .attribution{
+  flex: 1;
+}
 
-  .main-photo img {
-    max-width: 554px;
-    border-radius: 15px;
-    margin-top: 0px;
-} 
-  .thumbnail {
-    display: flex;
-    flex-direction: row;
-    height: 115px;
-    gap: 31px;
-  }
-  .thumbnail img{
-    border-radius: 15px;
-  }
-  hr{
-    height: 1px;
-    margin: 25px ;
-  }
-  .icones{
-    width: 45px;
-    height: auto;
-  }
+/*Header*/
+
+header{
+  border-bottom: 1px solid #ccc;
+  margin: 0 10%;
+}
+
+.categories {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav, ul{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  
+}
+
+li a{
+  padding: 1.5em;
+  text-decoration: none;
+  color: #7e7c7c;
+}
+
+.group2{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.Avatar{
+  width: 5vw;
+  height: auto;
+}
+
+/*Images du produit (+ Main)*/
+
+main{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.main-photo img{
+  width: 25vw;
+  height: auto;
+  border-radius: 1em;
+  margin-bottom: 2em;
+}
+
+.thumbnail img {
+  width: 5vw;
+  height: auto;
+  border-radius: 1em;
+  margin-right: calc(5vw / 4);
+}
+
+.photos{
+  padding-top: 5%;
+}
+
+/* Description du produit */
+
+h1{
+  font-size: 1em;
+  color:hsl(26, 100%, 55%)
+}
+
+h2{
+  font-size: 2.5em;
+}
+
+.description-chaussure{
+  color: #7e7c7c;
+}
+
+.reduction, .pourcentage {
+  display: inline;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.pourcentage{
+  display: inline-block;
+  background-color: hsl(25, 80%, 82%);
+  color: orange;
+  padding: 2px;
+  margin: 0;
+  border-radius: 5px;
+  font-size: 1.2em;
+
+}
+
+.prix-original {
+  text-decoration: line-through;
+  color: gray;
+  font-weight: bold;
+}
+
+
+
+
+
