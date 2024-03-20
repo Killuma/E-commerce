@@ -41,10 +41,41 @@ li a{
   align-items: center;
 }
 
-.Avatar{
-  width: 5vw;
-  height: auto;
+.cart-bubble {
+  position: absolute;
+  top: 3vw; 
+  right: 14.5%; 
+  width: 1vw;
+  height: 1vw;
+  background-color: orange;
+  border-radius: 50%; 
 }
+
+
+.Avatar{
+ width: 50px;
+ height: 50px;
+ padding: 20px;
+}
+/*Carte invisible/Header*/
+
+.container-cart {
+  position: fixed;
+  display: none;
+  top: 20px; 
+  right: 20px; 
+  
+}
+
+.container-cart > div {
+  display: flex;
+  flex-direction: column; 
+}
+
+.container-cart img {
+  max-width: 100px; 
+}
+
 
 /*Images du produit (+ Main)*/
 
@@ -111,7 +142,40 @@ h2{
   font-weight: bold;
 }
 
+.action{
+  display: flex;
+  flex-direction: row;
+}
 
+.quantite-container{
+  color: rgb(76, 95, 114);
+  background-color: transparent;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 15%;
+  text-align: center;
+  font-size: 20px;
+}
+  
+.decrease, .increase{
+  color: orange;
+}
 
+.carte{
+  display: flex;
+  width: 216px;
+  height: 36px;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row-reverse;
+  background-color: orange;
+  border: none;
+  color: white;
+}
 
-
+.carte img{
+  filter: brightness(5);
+}

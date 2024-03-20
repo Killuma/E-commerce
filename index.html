@@ -15,6 +15,7 @@
   </style>
 </head>
 <body>
+  <!--Haut de la page-->
   <header>
     <div class="categories">
       <nav>
@@ -30,9 +31,21 @@
       <div class="group2">
         <img src="images/image-avatar.png" class="Avatar" alt="Avatar">
         <img src="images/icon-cart.svg"    alt="Panier">
+        <div class="cart-bubble"></div>
       </div>
     </div>
+    <!--Carte invisible-->
+    <div class="container-cart">
+      <h3>Cart</h3>
+      <img src="images/image-product-1-thumbnail.jpg">
+      <p>Fall Limited Edition Sneakers</p>
+      <p>125.00 x3</p>
+      <p>$375.00</p>
+      <img src="images/icon-delete.svg">
+      <button>Checkout</button>
+      </div>
   </header>
+  <!--Image et carrousel-->
   <main>
     <section class="photos">
       <div class="main-photo">
@@ -45,6 +58,7 @@
           <img src="images/image-product-4-thumbnail.jpg">
         </div>
     </section>
+    <!--Description du produit-->
     <section id="description">
       <h1>SNEAKER COMPANY</h1>
       <h2>Fall Limited Edition <br>
@@ -52,17 +66,20 @@
       <p class="description-chaussure">These low-profile sneakers are your perfect casual wear<br>
       companion. Featuring a durable rubber outer sole, they’ll<br>
       withstand everything the weather can offer.
+      <!--Bouton et prix-->
       </p>
       <p class="reduction">$125.00</p>
       <p class="pourcentage">50%</p>
       <p class="prix-original">$250.00</p>
       <div class="action">
        <div class="quantite-container">
-         <button class="quantite-btn" id="decrease-btn">-</button>
+         <span class="decrease" id="decrease-btn">-</span>
          <span class="quantite">1</span>
-         <button class="quantite-btn" id="increase-btn">+</button>
+         <span class="increase" id="increase-btn">+</span>
        </div>
-       <button class="carte">Add to cart</button>
+       <button class="carte">Add to cart
+        <img class="Panier" src="images/icon-cart.svg" alt="Image Panier">
+       </button>
     </div>
     </section>
   </main>
