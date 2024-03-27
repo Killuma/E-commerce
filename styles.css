@@ -55,12 +55,19 @@ li a{
   display: none;
 }
 
+.avatarCont {
+  height: 80px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .Avatar{
  width: 50px;
  height: 50px;
- padding: 20px;
+ margin: 20px;
  border-radius: 50%;
- overflow: hidden;
 }
 
 .Avatar:active {
@@ -81,7 +88,12 @@ li a{
   width: 350px;
   height: 270px;
   right: -150px;
+  top: 50px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.hide {
+  display: none;
 }
 
 .Cart3{
@@ -126,16 +138,18 @@ li a{
 /*Carte Invisible 2*/
 
 .container-cart{
-  display: none;
+  /*display: none;*/
 }
 
 .Cart4{
   border-bottom: 1px solid gray;
   height: 40px;
+  padding-left: 25px;
 }
 
 .Panier-vide{
-  margin: 55px;
+  margin-left: 100px;
+  margin-top: 65px;
 }
 
 /*Images du produit (+ Main)*/
@@ -144,27 +158,47 @@ main{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  margin: 20px;
+  margin-top: 100px;
+  padding: 0 10%;
+  margin-bottom: 50px;
 }
 
 .main-photo img{
-  width: 50%;
-  height: auto;
-  border-radius: 1em;
-  margin-bottom: 2em;
+  width: 500px;
+  border-radius: 10px;
 }
 
-.thumbnail img {
-  width: 10.7%;
-  height: auto;
+.thumbnail {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  align-items: center;
+}
+
+.thumbnail > div {
+  width: 100px;
+  height: 100px;
   border-radius: 1em;
-  margin-right: calc(5vw / 4);
+}
+
+.thumbnail > div >img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
   transition: filter 0.3s ease;
 }
 
 .thumbnail img:hover {
-  filter: brightness(1.2);
+  filter: opacity(50%);
+}
+
+.active {
+  border: #ff7f00 solid 3px;
+}
+
+.active > img {
+  filter: opacity(50%);
 }
 
 .thumbnail img:active {
@@ -172,8 +206,11 @@ main{
 }
 
 .photos{
-  padding-top: 5%;
-
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Description du produit */
@@ -209,7 +246,7 @@ h2{
   padding: 3px;
   margin: 5px;
   border-radius: 5px;
-  font-size: 1em;
+  font-size: 14px;
 }
 
 .prix-original {

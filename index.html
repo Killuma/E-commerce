@@ -29,12 +29,14 @@
         </ul>
       </nav> 
       <div class="group2">
-        <img src="images/image-avatar.png" class="Avatar" alt="Avatar">
+        <div class="avatarCont">
+          <img src="images/image-avatar.png" class="Avatar" alt="Avatar">
+        </div>
         <div class="Panier-bulle">
           <img src="images/icon-cart.svg" class="Panier" alt="Panier">
-          <div class="cart-bubble"></div>
+          <div class="cart-bubble">1</div>
           <!-- Carte invisible -->
-          <div class="container-cart">
+          <div class="container-cart hide">
             <!-- Première carte -->
             <h3 class="Cart3">Cart</h3>
             <div class="cart-content">
@@ -47,7 +49,7 @@
             <button class="checkout-btn">Checkout</button>
           </div>
           <!-- Deuxième carte (si le panier est vide) -->
-          <div class="container-cart">
+          <div class="container-cart" style="display: none;">
             <h4 class="Cart4">Cart</h4>
             <p class="Panier-vide">Your cart is empty</p>
           </div>
@@ -58,15 +60,23 @@
   <!--Image et carrousel-->
   <main>
     <section class="photos">
-      <div class="main-photo">
-        <img src="images/image-product-1.jpg"  alt="photo-principale">
-      </div>
-        <div class="thumbnail">
-          <img src="images/image-product-1-thumbnail.jpg">
-          <img src="images/image-product-2-thumbnail.jpg">           
-          <img src="images/image-product-3-thumbnail.jpg">             
-          <img src="images/image-product-4-thumbnail.jpg">
+        <div class="main-photo">
+          <img src="images/image-product-1.jpg"  alt="photo-principale">
         </div>
+          <div class="thumbnail">
+            <div class="active">
+              <img src="images/image-product-1-thumbnail.jpg">
+            </div>
+            <div>
+              <img src="images/image-product-2-thumbnail.jpg">
+            </div>
+            <div>
+              <img src="images/image-product-3-thumbnail.jpg">
+            </div>
+            <div>
+              <img src="images/image-product-4-thumbnail.jpg">
+            </div>
+          </div>
     </section>
     <!--Description du produit-->
     <section id="description">
@@ -78,13 +88,15 @@
       withstand everything the weather can offer.
       <!--Bouton et prix-->
       </p>
-      <p class="reduction">$125.00</p>
-      <p class="pourcentage">50%</p>
+      <div>
+        <p class="reduction">$125.00</p>
+        <p class="pourcentage">50%</p>
+      </div>
       <p class="prix-original">$250.00</p>
       <div class="action">
        <div class="quantite-container">
          <span class="decrease" id="decrease-btn">-</span>
-         <span class="quantite">1</span>
+         <span class="quantite">0</span>
          <span class="increase" id="increase-btn">+</span>
        </div>
        <button class="carte">Add to cart
@@ -93,9 +105,5 @@
     </div>
     </section>
   </main>
-   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
