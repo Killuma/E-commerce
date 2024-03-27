@@ -30,19 +30,29 @@
       </nav> 
       <div class="group2">
         <img src="images/image-avatar.png" class="Avatar" alt="Avatar">
-        <img src="images/icon-cart.svg"    alt="Panier">
-        <div class="cart-bubble"></div>
+        <div class="Panier-bulle">
+          <img src="images/icon-cart.svg" class="Panier" alt="Panier">
+          <div class="cart-bubble"></div>
+          <!-- Carte invisible -->
+          <div class="container-cart">
+            <!-- Première carte -->
+            <h3 class="Cart3">Cart</h3>
+            <div class="cart-content">
+              <img src="images/image-product-1-thumbnail.jpg" class="img-chaussure">
+              <div class="text">
+                <p>Fall Limited Edition Sneakers 125.00 x3 $375.00</p>
+              </div>
+              <img src="images/icon-delete.svg" class="delete-icon">
+            </div>
+            <button class="checkout-btn">Checkout</button>
+          </div>
+          <!-- Deuxième carte (si le panier est vide) -->
+          <div class="container-cart">
+            <h4 class="Cart4">Cart</h4>
+            <p class="Panier-vide">Your cart is empty</p>
+          </div>
+        </div>
       </div>
-    </div>
-    <!--Carte invisible-->
-    <div class="container-cart">
-      <h3>Cart</h3>
-      <img src="images/image-product-1-thumbnail.jpg">
-      <p>Fall Limited Edition Sneakers</p>
-      <p>125.00 x3</p>
-      <p>$375.00</p>
-      <img src="images/icon-delete.svg">
-      <button>Checkout</button>
       </div>
   </header>
   <!--Image et carrousel-->
@@ -78,7 +88,7 @@
          <span class="increase" id="increase-btn">+</span>
        </div>
        <button class="carte">Add to cart
-        <img class="Panier" src="images/icon-cart.svg" alt="Image Panier">
+        <img class="Bouton-panier" src="images/icon-cart.svg" alt="Image Panier">
        </button>
     </div>
     </section>
