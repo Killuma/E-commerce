@@ -1,13 +1,63 @@
-body{
-  font-family: "Kumbh Sans", sans-serif;
-  overflow-x: hidden;
+/* Code de réinitialisation CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
- header, main .attribution{
+/* Réinitialisation du rôle d'affichage HTML5 pour les anciens navigateurs */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Styles personnalisés ici */
+
+body{
+   overflow-x: hidden;
+}
+
+header, main .attribution{
   flex: 1;
 }
-
-/*Header*/
+/*Haut de la page*/
 
 header{
   border-bottom: 1px solid #ccc;
@@ -18,6 +68,10 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.menu-burger{
+  display: none;
 }
 
 nav, ul{
@@ -55,10 +109,22 @@ li a{
   display: none;
 }
 
+.quantite-bubble{
+  position: absolute;
+  top: -8px;
+  right: -13px;
+  width: 18px;
+  height: 0px;
+  font-size: -5%;
+  color: white;
+  display: none;
+}
+
 .Avatar{
  width: 50px;
  height: 50px;
  padding: 20px;
+ margin: 20px;
  border-radius: 50%;
  overflow: hidden;
 }
@@ -67,8 +133,7 @@ li a{
   border: 2px solid orange; 
 }
 
-
-/*Carte invisible/Header*/
+/*Carte invisible 1*/
 
 .container-cart {
   font-family: "Kumbh Sans", sans-serif;
@@ -81,7 +146,9 @@ li a{
   width: 350px;
   height: 270px;
   right: -150px;
+  top: 50px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: none;
 }
 
 .Cart3{
@@ -123,19 +190,30 @@ li a{
   font-family: "Kumbh Sans", sans-serif;
   font-weight: bold;
 }
+
 /*Carte Invisible 2*/
 
-.container-cart{
+.container-cart-vide{
+  position: absolute;
+  background-color: white;
+  width: 350px;
+  height: 270px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
   display: none;
 }
+
 
 .Cart4{
   border-bottom: 1px solid gray;
   height: 40px;
+  padding-left: 25px;
 }
 
 .Panier-vide{
   margin: 55px;
+  margin-left: 100px;
+  margin-top: 65px;
 }
 
 /*Images du produit (+ Main)*/
@@ -146,6 +224,8 @@ main{
   align-items: center;
   justify-content: center;
   margin: 20px;
+  padding: 0 10%;
+  margin-bottom: 50px;
 }
 
 .main-photo img{
@@ -153,18 +233,48 @@ main{
   height: auto;
   border-radius: 1em;
   margin-bottom: 2em;
+  width: 500px;
+  border-radius: 10px;
+}
+
+.thumbnail {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .thumbnail img {
   width: 10.7%;
   height: auto;
+ }
+
+.thumbnail > div {
+  width: 100px;
+  height: 100px;
   border-radius: 1em;
   margin-right: calc(5vw / 4);
-  transition: filter 0.3s ease;
+}
+
+.thumbnail > div >img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  
 }
 
 .thumbnail img:hover {
   filter: brightness(1.2);
+  filter: opacity(50%);
+  
+}
+
+.active, .active-2, .active-3, .active-4 {
+  border: #ff7f00 solid 3px;
+}
+
+.active > img {
+  filter: opacity(50%);
 }
 
 .thumbnail img:active {
@@ -173,28 +283,37 @@ main{
 
 .photos{
   padding-top: 5%;
-
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Description du produit */
 
 h1{
-  font-size: 1em;
-  color:hsl(26, 100%, 55%)
+  font-size: 13px;
+  color:hsl(26, 100%, 55%);
+  margin-bottom : 20px;
+  font-weight: bold;
 }
 
 h2{
   font-size: 2.5em;
-  margin-top: -5px;
+  margin-top: auto;
+  margin-bottom: 25px;
+  font-weight: bold;
 }
 
 .description-chaussure{
-  color: #7e7c7cbd;
-  margin-bottom: 25px;
+  color: #535252;
+  margin-bottom: 30px;
 }
 
 .reduction{
   margin-right: 10px;
+  font-weight: bold;
 }
 
 .reduction, .pourcentage {
@@ -204,20 +323,21 @@ h2{
 }
 
 .pourcentage{
-  background-color: #fcd3b1e2;
+  background-color: #efb87461;
   color: orange;
   padding: 3px;
   margin: 5px;
   border-radius: 5px;
   font-size: 1em;
+  font-size: 14px;
 }
 
 .prix-original {
   text-decoration: line-through;
   color: #a09e9e98;
   font-weight: bold;
-  margin-top: 5px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 40px;
 }
 
 .action{
@@ -232,12 +352,11 @@ h2{
   align-items: center;
   justify-content: space-around;
   text-align: center;
-  width: 30%;
+  width: 35%;
   font-size: 20px;
   margin-right: 10px;
   background-color: #e9e6e6b0;
   font-weight: bold;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
   
 .decrease, .increase{
@@ -256,7 +375,7 @@ h2{
   border: none;
   color: white;
   font-weight: bold;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 .Bouton-panier{
@@ -268,14 +387,104 @@ h2{
   filter: brightness(5);
 }
 
-/* Challenge by Frontend Mentor */
+/* Media Querries */
 
-.attribution {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 10px 0; 
-  text-align: center;
-  font-size: 14px;
+@media screen and (max-width: 1024px){
+  
+  main{
+    padding: 0%;
+  }
+  
+  .photos{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-photo img{
+    width: 80%; 
+  }
+
+  .thumbnail{
+    width: 83%;
+  }
+
+  .description{
+    margin: auto;
+  }
+  
+
+}
+
+@media screen and (max-width: 768px){
+
+  body{
+    margin: auto;
+  }
+
+  main{
+    display: flex;
+    flex-direction: column;
+  }
+
+  header{
+    border-bottom: none;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+  }
+
+  ul{
+    display: none;
+  }
+
+  .menu-burger{
+    display: block;
+  }
+
+  .Avatar{
+    width: 30px;
+    height: 30px;
+  }
+
+  .Panier{
+    width: 10px;
+  }
+
+  .main-photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-photo img{
+    width: 240%;
+    height: 329px;
+  }
+
+  .thumbnail{
+    display: none;
+  }
+
+  h2{
+    font-size: 25px;
+  }
+
+  .description-chaussure{
+    font-size: 15px;
+  }
+
+
+
+
+  .action{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quantite-container{
+    width: auto;
+  }
+
 }

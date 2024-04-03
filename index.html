@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
   <title>Frontend Mentor | E-commerce product page</title>
@@ -17,6 +16,17 @@
 <body>
   <!--Haut de la page-->
   <header>
+    <!--Menu burger à afficher uniquement sur les petits écrans ! -->
+    <img src="images/icon-menu.svg" class="image-mobile" alt="Images pour les petits écrans">
+    <div class="menu-burger">
+      <ul>
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
     <div class="categories">
       <nav>
         <img src="images/logo.svg" alt="Logo sneakers">
@@ -29,10 +39,13 @@
         </ul>
       </nav> 
       <div class="group2">
-        <img src="images/image-avatar.png" class="Avatar" alt="Avatar">
+        <div class="avatarCont">
+          <img src="images/image-avatar.png" class="Avatar" alt="Avatar">
+        </div>
         <div class="Panier-bulle">
           <img src="images/icon-cart.svg" class="Panier" alt="Panier">
           <div class="cart-bubble"></div>
+          <div class="quantite-bubble">1</div>
           <!-- Carte invisible -->
           <div class="container-cart">
             <!-- Première carte -->
@@ -47,7 +60,7 @@
             <button class="checkout-btn">Checkout</button>
           </div>
           <!-- Deuxième carte (si le panier est vide) -->
-          <div class="container-cart">
+          <div class="container-cart-vide">
             <h4 class="Cart4">Cart</h4>
             <p class="Panier-vide">Your cart is empty</p>
           </div>
@@ -58,18 +71,26 @@
   <!--Image et carrousel-->
   <main>
     <section class="photos">
-      <div class="main-photo">
-        <img src="images/image-product-1.jpg"  alt="photo-principale">
-      </div>
-        <div class="thumbnail">
-          <img src="images/image-product-1-thumbnail.jpg">
-          <img src="images/image-product-2-thumbnail.jpg">           
-          <img src="images/image-product-3-thumbnail.jpg">             
-          <img src="images/image-product-4-thumbnail.jpg">
+        <div class="main-photo">
+          <img src="images/image-product-1.jpg"  alt="photo-principale">
         </div>
+          <div class="thumbnail">
+            <div class="active">
+              <img src="images/image-product-1-thumbnail.jpg">
+            </div>
+            <div class="active-2">
+              <img src="images/image-product-2-thumbnail.jpg">
+            </div>
+            <div class="active-3">
+              <img src="images/image-product-3-thumbnail.jpg">
+            </div>
+            <div class="active-4">
+              <img src="images/image-product-4-thumbnail.jpg">
+            </div>
+          </div>
     </section>
     <!--Description du produit-->
-    <section id="description">
+    <section class="description">
       <h1>SNEAKER COMPANY</h1>
       <h2>Fall Limited Edition <br>
         Sneakers</h2>
@@ -84,7 +105,7 @@
       <div class="action">
        <div class="quantite-container">
          <span class="decrease" id="decrease-btn">-</span>
-         <span class="quantite">1</span>
+         <span class="quantite">0</span>
          <span class="increase" id="increase-btn">+</span>
        </div>
        <button class="carte">Add to cart
@@ -93,9 +114,5 @@
     </div>
     </section>
   </main>
-   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
