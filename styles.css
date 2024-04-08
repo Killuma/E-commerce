@@ -70,7 +70,7 @@ header{
   justify-content: space-between;
 }
 
-.menu-burger{
+.moving-picture{
   display: none;
 }
 
@@ -91,7 +91,7 @@ li a{
   color: #7e7c7c;
 }
 
-.group2{
+.header-incons{
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -317,7 +317,7 @@ h2{
   font-weight: bold;
 }
 
-.description-chaussure{
+.description-shoe{
   color: #535252;
   margin-bottom: 30px;
   line-height: 26px;
@@ -328,13 +328,13 @@ h2{
   font-weight: bold;
 }
 
-.reduction, .pourcentage {
+.reduction, .percentage {
   display: inline;
   font-weight: bold;
   font-size: 1.4em;
 }
 
-.pourcentage{
+.percentage{
   background-color: #efb87461;
   color: orange;
   padding: 3px;
@@ -344,7 +344,7 @@ h2{
   font-size: 14px;
 }
 
-.prix-original {
+.original-price{
   text-decoration: line-through;
   color: #a09e9e98;
   font-weight: bold;
@@ -352,7 +352,7 @@ h2{
   margin-bottom: 40px;
 }
 
-.action{
+.cart-buttons{
   display: flex;
   flex-direction: row;
   
@@ -375,7 +375,7 @@ h2{
   color: orange;
 }
 
-.carte{
+.cart{
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
@@ -390,7 +390,7 @@ h2{
   font-family: "Kumbh Sans", sans-serif;
 }
 
-.Bouton-panier{
+.shopping-cart-buttons{
   margin-right: 10px;
   height: 15px;
 }
