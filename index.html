@@ -19,9 +19,11 @@
     <!--Menu burger à afficher uniquement sur les petits écrans ! -->
     <div class="categories">
       <nav>
+        <div class="burger-menu-container">
         <img src="images/icon-menu.svg" class="moving-picture" alt="Images pour les petits écrans">
     <div class="burger-menu">
-      <ul>
+      <img src="images/icon-close.svg" class="cross" alt="Fermeture de l'onglet catégories">
+      <ul class="burger-links">
         <li><a href="#">Collections</a></li>
         <li><a href="#">Men</a></li>
         <li><a href="#">Women</a></li>
@@ -29,13 +31,14 @@
         <li><a href="#">Contact</a></li>
       </ul>
     </div>
-        <img src="images/logo.svg" alt="Logo sneakers">
+  </div>
+        <img src="images/logo.svg" class="logo" alt="Logo sneakers">
         <ul>
-          <li><a href="#">Collections</a></li>
-          <li><a href="#">Men</a></li>
-          <li><a href="#">Women</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#" class="header-links">Collections</a></li>
+          <li><a href="#" class="header-links">Men</a></li>
+          <li><a href="#" class="header-links">Women</a></li>
+          <li><a href="#" class="header-links">About</a></li>
+          <li><a href="#" class="header-links">Contact</a></li>
         </ul>
       </nav> 
       <div class="header-incons">
@@ -71,8 +74,14 @@
   <!--Image et carrousel-->
   <main>
     <section class="photos">
+        <div>
+          <img src="images/icon-previous.svg" class=" arrow arrow-left" alt="Flèche direction gauche">
+        </div>
         <div class="main-photo">
           <img src="images/image-product-1.jpg"  alt="photo-principale">
+        </div>
+        <div>
+          <img src="images/icon-next.svg" class=" arrow arrow-right" alt="Flèche direction droite">
         </div>
           <div class="thumbnail">
             <div class="active">
@@ -99,7 +108,7 @@
       withstand everything the weather can offer.
       <!--Bouton et prix-->
       </p>
-      <div>
+      <div class="Price">
         <p class="reduction">$125.00</p>
         <p class="percentage">50%</p>
       </div>
