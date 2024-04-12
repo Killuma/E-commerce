@@ -294,9 +294,9 @@ main{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin: 20px;
-  padding: 0 5%;
+  padding: 0 10%;
   margin-bottom: 50px;
 }
 
@@ -442,7 +442,7 @@ h2{
   align-items: center;
   flex-direction: row-reverse;
   justify-content: center;
-  width: 250px;
+  width: 250px; /* à modifier en responsif*/
   height: 50px;
   border-radius: 10px;
   background-color: #ff7f00;
@@ -595,7 +595,7 @@ h2{
   .arrow-right {
     right: 10px;
   }
-}
+
 
 .container-cart {
   display: none; 
@@ -702,4 +702,4 @@ h2{
   .cart {
     width: 290px;
   }
-
+}
