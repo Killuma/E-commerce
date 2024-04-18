@@ -304,9 +304,10 @@ main{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   margin: 20px;
-  padding: 50px 10%;
+  padding: 0 5%;
+  margin-bottom: 50px;
 }
 
 .main-photo img{
@@ -452,7 +453,7 @@ h2{
   align-items: center;
   flex-direction: row-reverse;
   justify-content: center;
-  width: 250px; /* a modifier en responsive*/
+  width: 250px;
   height: 50px;
   border-radius: 10px;
   background-color: #ff7f00;
@@ -741,5 +742,5 @@ h2{
 
   .cart {
     width: 290px;
-   }
-}
+  }
+
