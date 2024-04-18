@@ -66,23 +66,13 @@ header {
   border-bottom: 1px solid #ccc;
 }
 
+.header-links:hover{
+  border-bottom: 5px solid orange;
+  padding-bottom: 47px;
+}
+
 a.header-links {
   margin-right: 15px;
-}
-
-.header-links::after {
-  content: '';
-  position: absolute;
-  bottom: -1px; 
-  left: 0;
-  width: max-content;
-  height: 2px;
-  background-color: orange;
-  transition: width 0.3s; 
-}
-
-.header-links:hover::after {
-  width: 100%;
 }
 
 .burger-menu-container{
@@ -112,6 +102,10 @@ a.header-links {
   font-size: 20px;
 }
 
+.arrow{
+  display: none;
+}
+
 .logo{
   margin-right: 55px;
 }
@@ -134,8 +128,13 @@ nav, ul{
   flex-direction: row;
   align-items: center;
   list-style: none;
-  
+  cursor: pointer;
 }
+
+nav a:hover {
+  color: black;
+}
+
 
 li {
   margin-left: 20px;
@@ -158,28 +157,32 @@ li a{
 
 .cart-bubble {
   position: absolute; 
-  top: -6px; 
-  right: -7px; 
+  top: -5px; 
+  right: 35px; 
   width: 18px; 
-  height: 12px; 
+  height: 13px; 
   background-color: orange; 
-  border-radius: 45%; 
-  display: none;
+  border-radius: 50%; 
 }
 
 .quantite-bubble{
   position: absolute;
-  top: -8px;
-  right: -13px;
-  width: 18px;
+  font-size: 10px;
+  top: -3px;
+  right: 30px;
+  width: 16px;
   height: 0px;
-  font-size: -5%;
   color: white;
-  display: none;
+
 }
 
 .Panier{
   margin-right: 40px;
+  cursor: pointer;
+}
+
+.panier:active{
+  background-color: black;
 }
 
 .avatarCont {
@@ -195,6 +198,7 @@ li a{
  height: 50px;
  margin: 20px;
  border-radius: 50%;
+ cursor: pointer;
 }
 
 .Avatar:active {
@@ -212,7 +216,7 @@ li a{
   background-color: white;
   border-radius: 10px;
   width: 350px;
-  height: 270px;
+  height: 225px;
   right: -150px;
   top: 50px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -255,12 +259,18 @@ li a{
 
 .delete-icon{
   margin-left: auto;
+  cursor: pointer;
 }
 
 .checkout-btn{
   align-items: flex-end;
   font-family: "Kumbh Sans", sans-serif;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.checkout-btn:hover{
+
 }
 
 /*Carte Invisible 2*/
@@ -294,10 +304,9 @@ main{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   margin: 20px;
-  padding: 0 5%;
-  margin-bottom: 50px;
+  padding: 50px 10%;
 }
 
 .main-photo img{
@@ -342,7 +351,7 @@ main{
   
 }
 
-.active, .active-2, .active-3, .active-4 {
+.active{
   border: #ff7f00 solid 3px;
 }
 
@@ -435,6 +444,7 @@ h2{
   
 .decrease, .increase{
   color: orange;
+  cursor: pointer;
 }
 
 .cart{
@@ -442,7 +452,7 @@ h2{
   align-items: center;
   flex-direction: row-reverse;
   justify-content: center;
-  width: 250px;
+  width: 250px; /* a modifier en responsive*/
   height: 50px;
   border-radius: 10px;
   background-color: #ff7f00;
@@ -484,6 +494,7 @@ h2{
 .shopping-cart-buttons{
   margin-right: 10px;
   height: 15px;
+  color: white;
 }
 
 .carte img{
@@ -494,34 +505,62 @@ h2{
   display: none;
 }
 
-/* Media Querries */
+/* Media Querries*/
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   
-  main{
-    padding: 0%;
+  main {
+    padding: 0;
   }
   
-  .photos{
+  .photos {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
 
-  /*.main-photo img{
-    /*width: 80%;
-  }*/
-
-  .thumbnail{
-    width: 83%;
+  .main-photo img {
+    width: 100%;
   }
 
-  .description{
+  .container-cart {
+    font-family: "Kumbh Sans", sans-serif;
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    width: 350px;
+    height: 223px;
+    right: -100px;
+    top: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none;
+  }
+
+  .container-cart-vide {
+    position: absolute;
+    background-color: white;
+    right: -100px;
+    width: 348px;
+    height: 223px;
+    top: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: none;
+  }
+
+  .thumbnail {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .description {
     margin: auto;
   }
   
-
-}
+} /* Fin du bloc @media screen and (max-width: 1024px) */
 
 @media screen and (max-width: 768px) {
 
@@ -536,6 +575,7 @@ h2{
     border-bottom: none;
     margin: 0;
   }
+  
   .avatarCont {
     display: flex;
     justify-content: space-between;
@@ -595,7 +635,7 @@ h2{
   .arrow-right {
     right: 10px;
   }
-}
+
 
 .container-cart {
   display: none; 
@@ -625,19 +665,19 @@ h2{
   top: 750%;
   margin-left: 40px;
   height: 218px;
-}
+ }
 
-.checkout-btn{
+ .checkout-btn{
   width: 270px;
-}
+} 
 
-.container-cart-vide{
+ .container-cart-vide{
   position: absolute;
   width: 267px;
   height: 246px;
   right: -44%;
   top: 56px;
-}
+ }
 
 
   ul {
@@ -701,5 +741,5 @@ h2{
 
   .cart {
     width: 290px;
-  }
-
+   }
+}
