@@ -269,9 +269,6 @@ li a{
   cursor: pointer;
 }
 
-.checkout-btn:hover{
-
-}
 
 /*Carte Invisible 2*/
 
@@ -304,18 +301,19 @@ main{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   margin: 20px;
   padding: 0 5%;
   margin-bottom: 50px;
 }
 
 .main-photo img{
-  height: 400px;
+  height: 450px;
   border-radius: 25px;
   margin-bottom: 25px;
-  width: 400px;
+  width: 450px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .description {
@@ -323,7 +321,7 @@ main{
 }
 
 .thumbnail {
-  width: 400px;
+  width: 447px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -332,6 +330,7 @@ main{
 .thumbnail img {
   width: 10.7%;
   height: auto;
+  cursor: pointer;
  }
 
 .thumbnail > div {
@@ -463,33 +462,13 @@ h2{
   font-family: "Kumbh Sans", sans-serif;
   filter: brightness(1.2);
   transition: 0.3s ease;
+  cursor: pointer;
 }
 
-.cart::before, .cart::after {
-  content: ''; 
-  position: absolute; 
-  width: 100%; 
-  height: 100%; 
-  border-radius: 10px; 
-  transition: opacity 0.3s ease;
-}
 
-.cart::before {
-  background-color: rgba(255, 255, 255, 0.3); 
-  opacity: 0; 
-}
-
-.cart::after {
-  background-color: rgba(255, 255, 255, 0); 
-  opacity: 0.5; 
-}
-
-.cart:hover::before {
-  opacity: 1; 
-}
-
-.cart:hover::after {
-  opacity: 0; 
+.cart:after {
+  filter: brightness(1.2);
+  filter: opacity(50%); 
 }
 
 .shopping-cart-buttons{
@@ -554,7 +533,7 @@ h2{
 
   .thumbnail {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
   .description {
@@ -573,14 +552,23 @@ h2{
   }
 
   header {
+    display: flex;
+    justify-content: flex-end;
     border-bottom: none;
     margin: 0;
+    width: 368px;
   }
   
+  .categories{
+    width: 368px;
+    height: 62px;
+  }
+
   .avatarCont {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 54px;
   }
 
   .Avatar {
@@ -594,49 +582,35 @@ h2{
     margin-left: 10px;
   }
 
-.main-photo img{
+  .Panier-bulle{
+    width: 50px;
+  }
+
+  .cart-bubble{
+    right: 12px;
+  }
+
+  .quantite-bubble{
+    right: 7px;
+  }
+
+ .main-photo img{
   margin-top: -63px;
-}
+ }
 
 .cross{
   margin-top: 25px;
   margin-left: 15px;
 }
 
-  .moving-picture {
-    display: block;
-    margin-right: 10px;
-  }
-
-  .burger-menu, .burger-links {
-    display: block;
-  }
+.burger-menu, .burger-links {
+  display: block;
+}
 
 .burger-links a{
   color: black;
   font-weight: bold;
 }
-
-  .arrow-left,
-  .arrow-right {
-    display: block; 
-    position: absolute; 
-    top: 50%; 
-    transform: translateY(-50%); 
-    width: 30px; 
-    height: 30px; 
-    background-size: cover; 
-    z-index: 1; 
-  }
-
-  .arrow-left {
-    left: 10px; 
-  }
-
-  .arrow-right {
-    right: 10px;
-  }
-
 
 .container-cart {
   display: none; 
@@ -719,15 +693,15 @@ h2{
   }
 
   h1 {
-    font-size: 16px;
+    font-size: 12px;
   }
 
   h2 {
-    font-size: 31px;
+    font-size: 23px;
   }
 
   .description-shoe {
-    font-size: 18px;
+    font-size: 13px;
   }
 
   .cart-buttons {
@@ -738,9 +712,11 @@ h2{
   .quantite-container {
     width: 290px;
     height: 45px;
+    margin-bottom: 13px;
   }
 
   .cart {
     width: 290px;
   }
 
+}
