@@ -15,23 +15,25 @@
 </head>
 <body>
   <!--Haut de la page-->
-  <header>
-    <!--Menu burger à afficher uniquement sur les petits écrans ! -->
-    <div class="categories">
-      <nav>
-        <div class="burger-menu-container">
-        <img src="images/icon-menu.svg" class="moving-picture" alt="Images pour les petits écrans">
+  <!--Menu burger à afficher uniquement sur les petits écrans ! -->
+
+  <div class="burger-menu-container">
     <div class="burger-menu">
-      <img src="images/icon-close.svg" class="cross" alt="Fermeture de l'onglet catégories">
-      <ul class="burger-links">
-        <li><a href="#">Collections</a></li>
-        <li><a href="#">Men</a></li>
-        <li><a href="#">Women</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+        <img src="images/icon-close.svg" class="cross" alt="Fermeture de l'onglet catégories">
+        <ul class="burger-links">
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
     </div>
   </div>
+  <header>
+
+    <div class="categories">
+      <img src="images/icon-menu.svg" class="moving-picture" alt="Images pour les petits écrans">
+      <nav>
         <img src="images/logo.svg" class="logo" alt="Logo sneakers">
         <ul>
           <li><a href="#" class="header-links">Collections</a></li>
@@ -49,35 +51,36 @@
           <img src="images/icon-cart.svg" class="Panier" alt="Panier">
           <div class="cart-bubble"></div>
           <div class="quantite-bubble">1</div>
-          <!-- Carte invisible -->
-          <div class="container-cart hide">
-            <!-- Première carte -->
-            <h3 class="Cart3">Cart</h3>
-            <div class="cart-content">
-              <img src="images/image-product-1-thumbnail.jpg" class="img-chaussure">
-              <div class="text">
-                <p>Fall Limited Edition Sneakers 125.00 x3 $375.00</p>
-              </div>
-              <img src="images/icon-delete.svg" class="delete-icon">
-            </div>
-            <button class="checkout-btn">Checkout</button>
-          </div>
-          <!-- Deuxième carte (si le panier est vide) -->
-          <div class="container-cart-vide">
-            <h4 class="Cart4">Cart</h4>
-            <p class="Panier-vide">Your cart is empty</p>
-          </div>
         </div>
       </div>
+      </div>
+
+      <!-- Carte invisible -->
+      <div class="container-cart hide">
+        <!-- Première carte -->
+        <h3 class="Cart3">Cart</h3>
+        <div class="cart-content">
+          <img src="images/image-product-1-thumbnail.jpg" class="img-chaussure">
+          <div class="text">
+            <p>Fall Limited Edition Sneakers 125.00 x3 $375.00</p>
+          </div>
+          <img src="images/icon-delete.svg" class="delete-icon">
+        </div>
+        <button class="checkout-btn">Checkout</button>
+      </div>
+      <!-- Deuxième carte (si le panier est vide) -->
+      <div class="container-cart-vide">
+        <h4 class="Cart4">Cart</h4>
+        <p class="Panier-vide">Your cart is empty</p>
       </div>
   </header>
   <!--Image et carrousel-->
   <main>
     <section class="photos">
         <div class="main-photo">
-          <img src="images/icon-previous.svg" class="arrow arrow-left hide" alt="Flèche direction gauche">
-          <img src="images/image-product-1.jpg"  alt="photo-principale">
-          <img src="images/icon-next.svg" class=" arrow arrow-right hide" alt="Flèche direction droite">
+          <img src="images/icon-previous.svg" class="arrow arrow-left" alt="Flèche direction gauche">
+          <img src="images/image-product-1.jpg" class="photo" alt="photo-principale">
+          <img src="images/icon-next.svg" class=" arrow arrow-right" alt="Flèche direction droite">
         </div>
           <div class="thumbnail">
             <div class="active">
@@ -104,11 +107,13 @@
       withstand everything the weather can offer.
       <!--Bouton et prix-->
       </p>
-      <div class="Price">
-        <p class="reduction">$125.00</p>
-        <p class="percentage">50%</p>
+      <div class="priceContainer">
+        <div class="Price">
+          <p class="reduction">$125.00</p>
+          <p class="percentage">50%</p>
+        </div>
+        <p class="original-price">$250.00</p>
       </div>
-      <p class="original-price">$250.00</p>
       <div class="cart-buttons">
        <div class="quantite-container">
          <span class="decrease" id="decrease-btn">-</span>
