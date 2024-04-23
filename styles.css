@@ -573,14 +573,19 @@ h2{
   top: 40%;
   background-color: white;
   width: 15px;
+  border-radius: 50%;
+  padding: 15px;
+  right: 48%;
 }
 
 .icon-previous{
   position: absolute;
   top: 40%;
-  right: 88%;
+  right: 87%;
   background-color: white;
   width: 15px;
+  border-radius: 50%;
+  padding: 15px;
 }
 
 /* Media Querries*/
@@ -671,7 +676,8 @@ h2{
 
   .carrousel {
     position: relative;
-    margin-left: 20%;
+    margin-left: 0;
+    left: 0;
   }
 
   .icon-previous{
