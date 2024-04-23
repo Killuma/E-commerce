@@ -529,6 +529,7 @@ h2{
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
+  left: 10%;
 }
 
 .preview-img{
@@ -665,7 +666,22 @@ h2{
     width: 70px;
     height: 70px;
   }
+
+/*carrousel tablette*/
+
+  .carrousel {
+    position: relative;
+    margin-left: 20%;
+  }
+
+  .icon-previous{
+    right: 99%;
+  }
   
+  .icon-close{
+    top: 30px;
+  }
+
 } /* Fin du bloc @media screen and (max-width: 1024px) */
 
 @media screen and (max-width: 768px) {
@@ -897,6 +913,10 @@ h2{
     left: 0;
     width: 100%;
     top: 90px;
+  }
+
+  .carrousel-container{
+    display: none;
   }
 
 }
