@@ -45,12 +45,12 @@
       </nav> 
       <div class="header-incons">
         <div class="avatarCont">
-          <img src="images/image-avatar.png" class="Avatar" alt="Avatar">
+          <img src="images/image-avatar.png" class="Avatar" id="Avatar">
         </div>
         <div class="Panier-bulle">
-          <img src="images/icon-cart.svg" class="Panier" alt="Panier">
+          <img src="images/icon-cart.svg" class="Panier" id="Panier">
           <div class="cart-bubble"></div>
-          <div class="quantite-bubble">1</div>
+          <div class="quantite-bubble" id="quantite-bubble">1</div>
         </div>
       </div>
       </div>
@@ -70,7 +70,7 @@
         <button class="checkout-btn">Checkout</button>
       </div>
       <!-- Deuxième carte (si le panier est vide) -->
-      <div class="container-cart-vide">
+      <div class="container-cart-vide hide">
         <h4 class="Cart4">Cart</h4>
         <p class="Panier-vide">Your cart is empty.</p>
       </div>
@@ -118,7 +118,7 @@
       <div class="cart-buttons">
        <div class="quantite-container">
          <span class="decrease" id="decrease-btn">-</span>
-         <span class="quantite">0</span>
+         <span class="quantite" id="quantite">0</span>
          <span class="increase" id="increase-btn">+</span>
        </div>
        <button class="cart">Add to cart
@@ -127,7 +127,7 @@
     </div>
     </section>
     <!--Image et carrousel-->
-    <div class="carrousel-container">
+    <div class="carrousel-container hide">
       <div class="carrousel">
         <div class="preview">
           <div class="img-presented">
@@ -146,5 +146,6 @@
       </div>
     </div>
   </main>
+  <script src="script.js"></script>
 </body>
 </html>

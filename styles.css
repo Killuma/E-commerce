@@ -207,7 +207,7 @@ li a{
 
 /*Carte invisible 1*/
 
-.container-cart {
+.container-cart{
   font-family: "Kumbh Sans", sans-serif;
   position: absolute;
   right: 0; 
@@ -220,7 +220,6 @@ li a{
   right: 0;
   top: 80px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  display: none;
 }
 
 h3{
@@ -518,7 +517,7 @@ h2{
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
-  
+  display: none;
 }
 
 .carrousel{
