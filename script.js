@@ -1,51 +1,67 @@
-/*Ouverture du panier */
-const Panier = document.getElementById('Panier');
-Panier.addEventListener('click', function() {
-    const panier = document.querySelector('.container-cart');
-    panier.classList.toggle('hide');
-    updateCartBubble(quantite)
-});
+/* Element du DOM */
+const cartEmpty          = document.getElementById('cart-empty');
+const cartItems          = document.getElementById('cart-items');
+const panierButton       = document.getElementById('Panier');
+const panierContainer    = document.getElementById('cart-items');
+const decreaseButton     = document.getElementById('decrease-btn');
+const increaseButton     = document.getElementById('increase-btn');
+const quantityElement    = document.getElementById('quantite');
+const cartBubble         = document.getElementById('quantite-bubble');
+const addToCartButton    = document.getElementById('add-to-cart-button')
+const cartContentElement = document.getElementById('.cart-content .text-prefix')
+const finalPriceElement  = document.getElementById('.cart-content .final-price')
+const prixUnitaire       = 125;
+let quantity = 0;
 
-/* Element du bouton de quantité */
-const decreaseButton = document.getElementById('decrease-btn');
-const increaseButton = document.getElementById('increase-btn');
-const QuantiteElement = document.getElementById('quantite');
-const cartBubble = document.getElementById('quantite-bubble');
-const prixUnitaire = 125;
+/*Mise à jour seulement de l'affichage de la quantité */
 
-let quantite = 0;
+function updateQuantityDisplay() {
+    quantityElement.textContent = quantity;
+  }
 
-/*Ajout (+1) quantité du bouton*/
-
-decreaseButton.addEventListener('click', function(){
-    if (quantite > 0 ) {
-        quantite--;
-        QuantiteElement.textContent = quantite;
-        updateCartBubble(quantite);
-        updateTotalPrice();
+/* Ajout (-1) quantité du bouton */
+decreaseButton.addEventListener('click', function() {
+    if (quantity > 0) {
+        quantity--;
+        updateQuantityDisplay()
     }
 });
 
-/*Ajout (-1) quantité du bouton */
-
-increaseButton.addEventListener('click', function(){
-    quantite++;
-    QuantiteElement.textContent = quantite;
-    updateCartBubble(quantite);
-    updateTotalPrice();
+/* Ajout (+1) quantité du bouton */
+increaseButton.addEventListener('click', function() {
+    quantity++;
+    updateQuantityDisplay()
 });
 
+/* Ouverture/fermeture du panier */
 
-/*Quantite de la bulle en fonction de la quantité du bouton*/
-function updateCartBubble(quantity) {
-    cartBubble.textContent = quantity;
+panierButton.addEventListener ('click', function() {
+    console.log('ouverture/fermeture carte')
+    cartEmpty.classList.toggle('hide');
+});
+
+/* Fonction pour ajouter au panier */
+
+function addToCart() {
+    const productName   = "Paire de sneaker";
+    const prixUnitaire  = 125;
+    let productQuantity = parseInt(document.getElementById('quantite').textContent);
+
+
+    if (productQuantity < 1) {
+        alert("Veuillez ajouter au moins un produit.");
+        return; 
+    }
+
+    console.log(`${productQuantity} x ${productName} ajoutés au panier pour ${productQuantity * prixUnitaire} €.`);
+
 }
 
-/*Mise à jour du prix total */
+addToCartButton.addEventListener('click', addToCart);
 
-function updateTotalPrice() {
-    const totalPriceElement = document.querySelector('.final-price');
-    const totalPrice = prixUnitaire * quantite;
-    totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
-    updateTotalPrice();
-}
+//calcul du prix total
+
+const totalPrice = quantityElement * prixUnitaire;
+
+
+
