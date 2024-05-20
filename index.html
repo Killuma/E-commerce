@@ -49,30 +49,31 @@
         </div>
         <div class="Panier-bulle">
           <img src="images/icon-cart.svg" class="Panier" id="Panier">
-          <div class="cart-bubble"></div>
-          <div class="quantite-bubble" id="quantite-bubble">1</div>
+          <div class="cart-bubble" id="cart-bubble">
+            <div class="quantite-bubble" id="quantite-bubble">1</div>
         </div>
       </div>
       </div>
 
-      <!-- Carte invisible -->
-      <div class="container-cart hide" id="cart-items">
-        <!-- Première carte -->
-        <h3 class="Cart3">Cart</h3>
-        <div class="cart-content">
-          <img src="images/image-product-1-thumbnail.jpg" class="img-chaussure">
-          <div class="text">
-            <p class="text-prefix">Fall Limited Edition Sneakers $125.00 x<span>3</span> <span class="final-price">$375.00</span></p>
+       <!-- Carte du panier -->
+    <div class="container-cart hide" id="cart-items">
+      <h3 class="Cart3">Cart</h3>
+      <div id="cart-content">
+        <!-- Message de panier vide -->
+        <p class="Panier-vide" id="cart-empty">Your cart is empty.</p>
+        <!-- Contenu du panier avec produits -->
+        <div id="cart-full" class="hide">
+          <div class="cart-content">
+            <img src="images/image-product-1-thumbnail.jpg" class="img-chaussure">
+            <div class="text">
+              <p class="text-prefix" id="cart-product-description"></p>
+            </div>
+            <img src="images/icon-delete.svg" class="delete-icon" id="delete-btn">
           </div>
-          <img src="images/icon-delete.svg" class="delete-icon" id="delete-btn">
+          <button class="checkout-btn">Checkout</button>
         </div>
-        <button class="checkout-btn">Checkout</button>
       </div>
-      <!-- Deuxième carte (si le panier est vide) -->
-      <div class="container-cart-vide hide" id="cart-empty">
-        <h4 class="Cart4">Cart</h4>
-        <p class="Panier-vide">Your cart is empty.</p>
-      </div>
+    </div>
   </header>
   <!--Image et carrousel-->
   <main>
@@ -117,7 +118,7 @@
       <div class="cart-buttons">
        <div class="quantite-container">
          <span class="decrease" id="decrease-btn">-</span>
-         <span class="quantite" id="quantite">0</span>
+         <span class="quantite" id="quantite">1</span>
          <span class="increase" id="increase-btn">+</span>
        </div>
        <button class="cart" id="add-to-cart-button">Add to cart

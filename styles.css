@@ -166,17 +166,6 @@ li a{
   border-radius: 50%; 
 }
 
-.quantite-bubble{
-  position: absolute;
-  font-size: 10px;
-  top: -3px;
-  right: 30px;
-  width: 16px;
-  height: 0px;
-  color: white;
-
-}
-
 .Panier{
   margin-right: 40px;
   cursor: pointer;
@@ -243,6 +232,7 @@ h3{
   color: white;
   border: none;
   border-radius: 7px;
+  width: 91%;
 }
 
 .delete-icon{
