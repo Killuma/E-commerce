@@ -12,6 +12,7 @@ const cartProductDescription = document.getElementById('cart-product-description
 const deleteButton           = document.getElementById('delete-btn');
 const iconsMenuBurger        = document.getElementById('icons-menu');
 const MenuBurger             = document.getElementById('Menu-burger');
+const closeMenuButton        = document.getElementById('cross')
 const prixUnitaire = 125;
 let quantity = 1; 
 
@@ -89,3 +90,27 @@ function removeFromCart() {
 
 /* Écouteur d'événement pour le bouton de suppression du produit */
 deleteButton.addEventListener('click', removeFromCart);
+
+/* Ouverture fermeture du menu burger*/
+
+document.addEventListener('DOMContentLoaded', function() {
+    const iconsMenuBurger = document.getElementById('icons-menu');
+    const MenuBurger = document.getElementById('Menuburger');
+    const closeMenuButton = document.getElementById('cross');
+
+    if (iconsMenuBurger) {
+        iconsMenuBurger.addEventListener('click', function() {
+            if (MenuBurger) {
+                MenuBurger.classList.toggle('hide');
+            }
+        });
+    }
+
+    if (closeMenuButton) {
+        closeMenuButton.addEventListener('click', function() {
+            if (MenuBurger) {
+                MenuBurger.classList.toggle('hide');
+            }
+        });
+    }
+});
