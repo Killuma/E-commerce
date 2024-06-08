@@ -3,21 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="C:\Users\mathe\Downloads\téléchargement.jpeg">
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
-  <title>Frontend Mentor | E-commerce product page</title>
+  <title>E-commerce product page</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-  <!--Haut de la page-->
-  <!--Menu burger à afficher uniquement sur les petits écrans ! -->
-
-  <div class="burger-menu-container" id="Menuburger">
+  <div class="burger-menu-container hide" id="Menuburger">
     <div class="burger-menu">
         <img src="images/icon-close.svg" class="cross" id="cross"  alt="Fermeture de l'onglet catégories">
         <ul class="burger-links">
@@ -30,7 +26,6 @@
     </div>
   </div>
   <header>
-
     <div class="categories">
       <img src="images/icon-menu.svg" class="moving-picture" id="icons-menu" alt="Images pour les petits écrans">
       <nav>
@@ -54,14 +49,10 @@
         </div>
       </div>
       </div>
-
-       <!-- Carte du panier -->
     <div class="container-cart hide" id="cart-items">
       <h3 class="Cart3">Cart</h3>
       <div id="cart-content">
-        <!-- Message de panier vide -->
         <p class="Panier-vide" id="cart-empty">Your cart is empty.</p>
-        <!-- Contenu du panier avec produits -->
         <div id="cart-full" class="hide">
           <div class="cart-content">
             <img src="images/image-product-1-thumbnail.jpg" class="img-chaussure">
@@ -75,12 +66,11 @@
       </div>
     </div>
   </header>
-  <!--Image et carrousel-->
   <main>
     <section class="photos">
         <div class="main-photo">
           <img src="images/icon-previous.svg" class="arrow arrow-left" alt="Flèche direction gauche">
-          <img src="images/image-product-1.jpg" class="photo" alt="photo-principale">
+          <img src="images/image-product-1.jpg" class="photo" alt="photo-principale" id="main-photo">
           <img src="images/icon-next.svg" class=" arrow arrow-right" alt="Flèche direction droite">
         </div>
           <div class="thumbnail">
@@ -98,7 +88,6 @@
             </div>
           </div>
     </section>
-    <!--Description du produit-->
     <section class="description">
       <h1>SNEAKER COMPANY</h1>
       <h2>Fall Limited Edition <br>
@@ -106,7 +95,6 @@
       <p class="description-shoe">These low-profile sneakers are your perfect casual wear<br>
       companion. Featuring a durable rubber outer sole, they’ll<br>
       withstand everything the weather can offer.
-      <!--Bouton et prix-->
       </p>
       <div class="priceContainer">
         <div class="Price">
@@ -126,21 +114,20 @@
        </button>
     </div>
     </section>
-    <!--Image et carrousel-->
-    <div class="carrousel-container hide">
-      <div class="carrousel">
-        <img src="images/image-product-1.jpg" class="preview-img">
-            <img src="images/icon-close.svg" class="icon-close">
-            <img src="images/icon-next.svg" class="icon-next">
-            <img src="images/icon-previous.svg" class="icon-previous">
-            <div class="img-preview">
-              <img src="images/image-product-1-thumbnail.jpg" class="thumbnail-1">
-              <img src="images/image-product-2-thumbnail.jpg">
-              <img src="images/image-product-3-thumbnail.jpg">
-              <img src="images/image-product-4-thumbnail.jpg">
-            </div>
-      </div>
+<div class="carrousel-container hide" id="carrousel">
+  <div class="carrousel">
+    <img src="images/image-product-1.jpg" class="preview-img" id="preview-img">
+    <img src="images/icon-close.svg" class="icon-close" id="icon-close">
+    <img src="images/icon-next.svg" class="icon-next">
+    <img src="images/icon-previous.svg" class="icon-previous">
+    <div class="img-test" id="img-preview">
+      <img src="images/image-product-1-thumbnail.jpg" class="preview-imge">
+      <img src="images/image-product-2-thumbnail.jpg" class="preview-imge">
+      <img src="images/image-product-3-thumbnail.jpg" class="preview-imge">
+      <img src="images/image-product-4-thumbnail.jpg" class="preview-imge">
     </div>
+  </div>
+</div>
   </main>
   <script src="script.js"></script>
 </body>
